@@ -1,0 +1,79 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #07252d;
+        background-image: url("../picture/background_1.jpg");
+        background-size: cover;
+    }
+
+    h2 {
+        position: absolute;
+        font-size: 3em; /* Mengurangi ukuran font agar cocok untuk layar mobile */
+        letter-spacing: 8px; /* Mengurangi jarak antar huruf agar terlihat lebih baik di layar kecil */
+        color: #ff4d6d;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        line-height: 1em;
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+        outline: none;
+        animation: animate 5s linear infinite ;
+        top: 50%; /* Menengahkan teks secara vertikal */
+        transform: translateY(-50%);
+    }
+
+    .click-here {
+        position: absolute;
+        bottom: 20px; /* Menggeser ke bawah */
+        left: 50%;
+        transform: translateX(-50%);
+        color: #0004ff;
+        font-size: 1.2em; /* Mengurangi ukuran font agar cocok untuk layar mobile */
+        text-align: center;
+    }
+
+    .click-here a {
+        color: #000000;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .click-here a:hover {
+        text-decoration: underline;
+    }
+
+    @keyframes animate {
+        0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+            color: #ff4d6d;
+            box-shadow: none;
+        }
+        18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+            color: #FFF;
+            text-shadow:
+                0 0 5px #da1010, /* Mengurangi efek shadow agar tidak terlalu tebal di layar kecil */
+                0 0 10px #da1010,
+                0 0 20px #da1010,
+                0 0 40px #da1010,
+                0 0 50px #da1010; /* Mengurangi efek shadow agar tidak terlalu tebal di layar kecil */
+        }
+    }
+
+    @media screen and (max-width: 768px) { /* Mendefinisikan aturan CSS khusus untuk layar dengan lebar maksimum 768px (tablet dan perangkat mobile) */
+        h2 {
+            font-size: 2.5em; /* Ukuran font yang lebih kecil untuk layar kecil */
+            letter-spacing: 5px; /* Jarak antar huruf yang lebih kecil untuk layar kecil */
+        }
+
+        .click-here {
+            font-size: 1em; /* Ukuran font yang lebih kecil untuk layar kecil */
+        }
+    }
