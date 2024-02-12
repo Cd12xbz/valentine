@@ -37,7 +37,7 @@
         left: 50%;
         transform: translateX(-50%);
         color: #0004ff;
-        font-size: 1.2em; /* Mengurangi ukuran font agar cocok untuk layar mobile */
+        font-size: 3em; /* Mengurangi ukuran font agar cocok untuk layar mobile */
         text-align: center;
     }
 
