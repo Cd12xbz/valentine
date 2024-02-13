@@ -11,7 +11,7 @@ const nobtnreact = No.getBoundingClientRect();
 
 
 Yes.addEventListener('click',()=>{
-    question.innerHTML = "Nanti Ku Telfon Ya !!";
+    question.innerHTML = '<a href="https://gifft.me/hm#r3cMt8rbllbO1yPq7IB7">Klik Buat Buka Hadiah</a>';
 });
 
     No.addEventListener('mouseover',()=>{
