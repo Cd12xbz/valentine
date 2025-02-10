@@ -1,0 +1,132 @@
+    /* Background Video */
+    #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Supaya video ada di belakang konten */
+    }
+
+    /* Gaya agar teks tetap terlihat jelas */
+    body {
+        position: relative;
+        background: none; /* Hilangkan background color agar video terlihat */
+        text-align: center;
+        font-family: 'Arial', sans-serif;
+        color: white; /* Warna teks agar terlihat di atas video */
+    }
+
+
+    h1{
+        text-align: center;
+        margin: 0 auto;
+        max-width: 600px;
+        font-size: 20px;
+        line-height: 1.6;
+        font-weight: bold;
+    }
+
+    button, a.button {
+        background-color: red;
+        color: white !important; /* Pastikan teks selalu putih */
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold; /* Opsional: agar teks lebih tegas */
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    button:hover, a.button:hover {
+        background-color: darkred; /* Warna tombol saat hover */
+        color: white !important; /* Tetap putih saat hover */
+    }
+    
+    a {
+        text-decoration: none;
+        color: inherit; /* Mengikuti warna elemen */
+    }
+    
+    .heart {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: red;
+        clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 75%, 25% 100%, 0% 35%);
+        animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+    }
+
+    .image-collage, #randomPic {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 25px;
+        flex-wrap: wrap; /* Agar gambar dapat wrap (berpindah baris) di layar kecil */
+    }
+
+    .image-collage img, #randomPic img {
+        margin: 0 auto; /* Memusatkan container */
+        max-width: 1200px; /* Membatasi lebar container */
+        width: 100%; /* Mengatur gambar agar lebar 100% dari kontainer */
+        height: auto; /* Menjaga proporsi gambar */
+        max-width: 240px; /* Membatasi lebar gambar agar tidak lebih besar dari 240px */
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+
+    p1{
+        font-style: italic;
+    }
+
+    p {
+        text-align: justify;
+        margin: 0 auto;
+        max-width: 600px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+
+        #video {
+            width: 90%; /* Sesuaikan agar video lebih kecil pada layar kecil */
+            height: auto; /* Mempertahankan proporsi */
+        }
+        
+        .image-collage img, #randomPic img {
+            width: 45%; /* Gambar akan mengambil 45% lebar kontainer */
+            max-width: 200px; /* Maksimum ukuran gambar */
+        }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 480px) {
+        .container {
+            text-align: center;
+            padding: 10px;
+            }
+        .image-collage img, #randomPic img {
+            width: 90%; /* Gambar akan mengambil 90% lebar kontainer di layar lebih kecil */
+            max-width: 180px; /* Maksimum ukuran gambar */
+            }
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            }
+        video {
+            width: 100%;
+            height: auto;
+            }
+    }

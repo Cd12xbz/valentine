@@ -1,0 +1,115 @@
+body {
+    background-color: pink;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+button, a.button {
+    background-color: red;
+    color: white !important;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, a.button:hover {
+    background-color: darkred;
+    color: white !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+video {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 480px;
+    height: 480px;
+}
+
+.heart {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 75%, 25% 100%, 0% 35%);
+    animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+}
+
+.image-collage, #randomPic {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.image-collage img, #randomPic img {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    max-width: 240px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+p1 {
+    font-style: italic;
+}
+
+p {
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    #video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        text-align: center;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
